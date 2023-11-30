@@ -30,7 +30,13 @@ console.log(crazyDiff(100))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const boundary = n => (n >= 20 && n <= 100) || n === 400
+const boundary = n => {
+	if (typeof n !== 'number' && !Number.isInteger(n)) {
+		return false
+	}
+	return (n >= 20 && n <= 100) || n === 400
+}
+
 console.log(boundary(30))
 console.log(boundary(400))
 console.log(boundary(10))
